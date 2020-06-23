@@ -57,6 +57,6 @@ def generate_graph(filepath):
     df = pd.read_csv(filepath)
     df.total_stars = df.total_stars.apply(lambda val :int(val.strip().replace(',','')))
     df.total_forks = df.total_forks.apply(lambda val :int(val.strip().replace(',','')))
-    fig = px.scatter_3d(df,x='repository',y='total_stars',z='total_forks',title=filepath,size='total_stars',color='total_forks')
+    fig = px.bar(df,x='repository',y='total_stars',title=filepath,color='total_forks')
     # fig = px.bar(df,x='repository',y='total_stars',title=filepath)
     return fig
