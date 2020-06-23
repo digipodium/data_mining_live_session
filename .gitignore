@@ -124,3 +124,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .vscode/settings.json
+datasets/javascript_daily_2020-06-23
+datasets/python_daily_2020-06-23
+datasets/javascript_monthly_2020-06-23
+datasets/python_monthly_2020-06-23
