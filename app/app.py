@@ -5,7 +5,7 @@ import pandas as pd
 # variables
 
 st.sidebar.title("Menu options")
-lang = st.sidebar.selectbox("select a language",['python','javascript'])
+lang = st.sidebar.selectbox("select a language",['python','javascript','c++','java','html','css','c'])
 date = st.sidebar.selectbox("date range",['daily','weekly','monthly'])
 
 # step 1
@@ -42,14 +42,14 @@ if soup :
 
 files = os.listdir('datasets')
 if files:
-    selected_files = st.sidebar.selectbox('created datasets',files)
-btnview = st.sidebar.button('view')
+    selected_files = st.selectbox('created datasets',files)
+btnview = st.button('view data')
 if btnview:
     content = pd.read_csv('datasets/'+selected_files)
     st.subheader("viewing saved dataset")
     st.write(content)
 
-btngraph = st.sidebar.button('view graph')
+btngraph = st.button('view graph')
 if btngraph:
     fig = sc.generate_graph('datasets/'+selected_files)
     st.plotly_chart(fig)
