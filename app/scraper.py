@@ -12,5 +12,5 @@ def get_data_as_soup(url):
         return BeautifulSoup(page.text, 'html5lib')
 
 def view_raw_data(soup):
-    return soup.text
+    return soup
     
